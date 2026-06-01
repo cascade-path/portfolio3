@@ -1,12 +1,20 @@
+---
+const { title = "no title" } = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta property="og:title" content={title} />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="/ogp.png" />
+		<meta property="og:description" content="cascade-pathのポートフォリオサイトです。" />
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
@@ -14,6 +22,10 @@
 </html>
 
 <style>
+	:root{
+    --color: #0cf;
+	}
+	
 	html,
 	body {
 		margin: 0;
