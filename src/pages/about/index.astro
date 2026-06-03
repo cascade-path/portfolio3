@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import H1 from '../../components/H1.astro';
+import Main from '../../components/Main.astro';
 import Section from '../../components/Section.astro';
 import Damy from '../../components/Damy.astro';
 ---
@@ -10,7 +11,9 @@ import Damy from '../../components/Damy.astro';
 <Layout title="a">
 	<Header />
 	<H1>about</H1>
-	<Section />
-	<Damy />
-	<Footer />
+    <Main>
+        <Section />
+        <Damy />
+    </Main>
+    <Footer />
 </Layout>

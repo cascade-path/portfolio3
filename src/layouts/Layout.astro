@@ -8,7 +8,7 @@ const { title = "no title" } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<!--<link rel="icon" href="/favicon.ico" />-->
 		<meta name="generator" content={Astro.generator} />
 		<meta property="og:title" content={title} />
 		<meta property="og:type" content="website" />
@@ -26,10 +26,10 @@ const { title = "no title" } = Astro.props;
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) {
-          // 元の位置が画面外 → 固定ON
+          // 元の位置が画面外
           headerScrolled.setAttribute('data-fixed', 'true');
         } else {
-          // 元の位置が画面内 → 固定OFF
+          // 元の位置が画面内
           headerScrolled.setAttribute('data-fixed', 'false');
         }
       });

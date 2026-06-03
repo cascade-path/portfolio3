@@ -2,6 +2,17 @@
 ---
 
 <footer>
+    <div class="sitemap">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/skill">Skill</a></li>
+            <li><a href="/works">Works</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/sitemap">Sitemap</a></li>
+        </ul>
+    </div>
     <div class="copy">&copy;2026 cascade-path</div>
 </footer>
 
@@ -10,7 +21,26 @@
     footer{
         display: grid;
         place-items: center;
-        height: 200px;
+        height: 300px;
         background: var(--main);
     }
 </style>
+
+<!-- 
+  index.astro
+  about/
+    index.astro
+  skill/
+    index.astro
+    css.astro
+  works/
+    index.astro
+    [slug].astro
+  contact/
+    index.astro
+  blog/       /* 拡張用 */
+    index.astro
+    [slug].astro
+  sitemap/
+    index.html
+-->
