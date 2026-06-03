@@ -9,7 +9,9 @@
     <nav>
         <a href="/">top</a>
         <a href="/about">about</a>
-        <a href="">contact</a>
+        <a href="/skill">skill</a>
+        <a href="/works">works</a>
+        <a href="/contact">contact</a>
     </nav>
 </header>
 <header data-scrolled>
@@ -17,9 +19,11 @@
         <img src="/logo.svg" alt="Cascade-path Logo">
     </div>
     <nav>
-        <a href="">top</a>
-        <a href="">about</a>
-        <a href="">contact</a>
+        <a href="/">top</a>
+        <a href="/about">about</a>
+        <a href="/skill">skill</a>
+        <a href="/works">works</a>
+        <a href="/contact">contact</a>
     </nav>
 </header>
 
@@ -41,6 +45,13 @@
         background: var(--main);
         color: unset;
         text-decoration: unset;
+    }
+    header nav a:hover{
+        background-opacity: .5;
+        opacity: .8;
+        color: var(--main);
+        text-shadow: 0 0 5px var(--accent);
+        transition: color .2s, text-shadow .2s;
     }
     header[data-static]{
         grid-template-rows: 60px 200px 60px;
