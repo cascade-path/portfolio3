@@ -18,7 +18,7 @@ const { title = "no title" } = Astro.props;
 	</head>
 	<body>
 		<slot />
-		<script>
+		<script is:client>
   const header = document.querySelector('header');
   const headerScrolled = document.querySelector('header[data-scrolled]');
 
