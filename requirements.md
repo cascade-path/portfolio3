@@ -63,13 +63,21 @@ Supabase Strage無料枠
 Layout.astro
 pages/
   index.astro
-  about.astro
+  about/
+    index.astro
+  skill/
+    index.astro
+    css.astro
   works/
     index.astro
     [slug].astro
-  contact.astro
-  blog/
-    index astro /* 拡張用 */
+  contact/
+    index.astro
+  blog/       /* 拡張用 */
+    index.astro
+    [slug].astro
+  sitemap/
+    index.html
 Components/
   header.astro
   header-scrolled.astro

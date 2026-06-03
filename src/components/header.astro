@@ -1,14 +1,76 @@
 ---
 ---
 
-<header>
+<header data-static>
+    <div class="logo">Cascade-path</div>
+    <div style="height:300px"></div>
     <nav>
+        <a href="/">top</a>
+        <a href="/about">about</a>
+        <a href="">contact</a>
+    </nav>
+</header>
+<header data-scrolled>
+    <div class="logo">Cascade-path</div>
+    <nav>
+        <a href="">top</a>
+        <a href="">about</a>
+        <a href="">contact</a>
     </nav>
 </header>
 
 <style>
     header{
-        background: red;
-        height: 300px;
+        display: grid;
+        grid-template-columns: 200px 1fr;
     }
+    header nav{
+        display: grid;
+        grid-auto-flow: column;
+        gap: 3px;
+        width: 100%;
+        background: linear-gradient(180deg,var(--main) 0% 10%,var(--accent) 10% 90%,var(--main) 90% 100%);
+    }
+    header nav a{
+        display: grid;
+        place-items: center;
+        background: var(--main);
+        color: unset;
+        text-decoration: unset;
+    }
+    header[data-static]{
+        grid-template-rows: 80px 200px 80px;
+        background: var(--main);
+        position: relative;
+        z-index: 1;
+    }
+    header[data-static] nav{
+        grid-row: 3/4;
+        grid-column: 2/3;
+    }
+    .logo{
+        grid-column: 1/2;
+        width: 200px;
+        height: 70px;
+        background: red;
+        position: sticky;
+        top: 0;
+    }
+    nav{
+    }
+    header[data-scrolled]{
+        background: var(--main);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        transform: translateY(-100%);
+        transition: .5s .5s;
+    }
+    header[data-scrolled][data-fixed="true"]{
+        transform: translateY(0%);
+        z-index: 1;
+    }
+
 </style>

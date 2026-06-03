@@ -18,18 +18,45 @@ const { title = "no title" } = Astro.props;
 	</head>
 	<body>
 		<slot />
+		<script>
+  const header = document.querySelector('header');
+  const headerScrolled = document.querySelector('header[data-scrolled]');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          // 元の位置が画面外 → 固定ON
+          headerScrolled.setAttribute('data-fixed', 'true');
+        } else {
+          // 元の位置が画面内 → 固定OFF
+          headerScrolled.setAttribute('data-fixed', 'false');
+        }
+      });
+    },
+    { threshold: 0 }
+  );
+
+  observer.observe(header);
+</script>
+
 	</body>
 </html>
 
 <style>
 	:root{
-    --color: #0cf;
+		--base: #333;
+	    --main: #0bd;
+		--accent: #fff;
 	}
-	
+
 	html,
 	body {
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		background: var(--base);
+		color: var(--accent);
+		overscroll-behavior: none;
 	}
 </style>
