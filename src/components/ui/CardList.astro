@@ -1,0 +1,25 @@
+<div class="card-list"><slot /></div>
+
+<style>
+    .card-list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin: 0 auto;
+        width: min(90%, 800px);
+    }
+    @media (max-width: 600px) {
+        .card-list{
+            grid-template-columns: 2fr;
+        }
+    }
+</style>
+
+<style is:global>
+    :has(.toggle-switch:checked) .card-list .card{
+        width: 100%;
+    }
+    :has(.toggle-switch:checked) .card-list{
+        grid-template-columns: 1fr;
+    }
+</style>

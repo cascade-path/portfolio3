@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import H1 from '../../components/H1.astro';
+import H2 from '../../components/H2.astro';
+import Main from '../../components/Main.astro';
+import Section from '../../components/Section.astro';
+import CardList from '../../components/ui/CardList.astro';
+import Card from '../../components/ui/Card.astro';
+import ToggleSwitch from '../../components/ui/ToggleSwitch.astro';
+---
+
+<Layout title="a">
+	<Header />
+	<H1>制作実績/works</H1>
+    <Main>
+        <H2>一覧</H2>
+        <div class="works-list">
+            <ToggleSwitch />
+            <CardList>
+                <Card title="作品タイトル1" src="https://res.cloudinary.com/drzcql6d4/image/upload/q_auto/f_auto/v1780557985/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-05-16_10.33.49_w0sven.png" href="#" />
+                <Card title="作品タイトル2" src="https://res.cloudinary.com/drzcql6d4/image/upload/f_auto,q_auto/calc-about_vknhw8" href="#" />
+                <Card title="作品タイトル3" src="https://res.cloudinary.com/drzcql6d4/image/upload/f_auto,q_auto/calc-about_vknhw8" href="#" />
+            </CardList>
+        </div>
+        <H2>制作過程</H2>
+        <p>制作過程の説明が入ります。アイデアの発想から完成までの流れや、使用したツール、技術的なチャレンジなどを紹介します。</p>
+        <Section data-reverse="true">
+            <div class="h2-img">
+                <img src="favicon.svg" alt="about">
+                <img src="https://res.cloudinary.com/drzcql6d4/image/upload/f_auto,q_auto/calc-about_vknhw8" alt="works">
+                <h3>作品タイトル</h3>
+                <p>作品の説明文が入ります。作品の特徴や使用技術などを簡潔に紹介します。</p>
+            </div>
+        </div>
+        <H2>制作過程</H2>
+        <p>制作過程の説明が入ります。アイデアの発想から完成までの流れや、使用したツール、技術的なチャレンジなどを紹介します。</p>
+        <Section data-reverse="true">
+            <div class="h2-img">
+                <img src="favicon.svg" alt="about">
+            </div>
+            <div>
+                <p>cascade-pathは、フロントエンドの個人プロジェクトです。主にWeb開発に関するコンテンツを提供しています。</p>
+                <p>CSSの表現限界に挑戦する制作などを行なっています。</p>
+                <p>このサイトでは、プロジェクトの紹介、技術スタック、開発ブログ、そしてお問い合わせフォームなどを掲載しています。</p>
+                <p>私の目標は、フロントエンド開発の最新トレンドやベストプラクティスを共有し、同じ興味を持つ人々と交流することです。</p>
+            </div>
+        </Section>
+    </Main>
+    <Footer />
+</Layout>
