@@ -1,20 +1,37 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
-import H1 from '../components/H1.astro';
 import Section from '../components/Section.astro';
 import Damy from '../components/Damy.astro';
 import Hero from '../components/Hero.astro';
+import ScrollSnap from '../components/ScrollSnap.astro';
 ---
 
-<Layout title="a">
+<Layout title="cascade-path 3.0">
 	<Hero />
-	<H1>aaa33</H1>
+	<ScrollSnap>
+		<div class="scroll-snap-item">Section 1</div>
+		<div class="scroll-snap-item">Section 2</div>
+		<div class="scroll-snap-item">Section 3</div>
+		<div class="scroll-snap-item">Section 4</div>
+	</ScrollSnap>
 	<Section />
 	<Damy />
 	<Footer />
 </Layout>
 
 <style>
+	.scroll-snap-item{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 50vh;
+		font-size: 2rem;
+		background-color: var(--accent);
+		border-radius: 0.5rem;
+		box-shadow: 0 0 8px var(--accent);
+		color: var(--base);
+		scroll-snap-align: center;
+	}
 	
 </style>

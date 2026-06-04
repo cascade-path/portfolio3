@@ -1,0 +1,15 @@
+<div class="scroll-snap">
+	<slot />
+</div>
+
+<style>
+    .scroll-snap{
+        display: grid;
+        grid-template-rows: repeat(auto-fit, 100vh);
+        overflow-y: auto;
+        scroll-snap-type: y mandatory;
+        height: 50vh;
+        gap: 1rem;
+        padding: 1rem;
+    }
+</style>
