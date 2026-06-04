@@ -1,1 +1,32 @@
-<section>section</section>
+<section>
+    <slot />
+</section>
+
+<style is:global>
+    section{
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 3rem;
+        max-width: 800px;
+        margin: 2em auto;
+    }
+    section[data-reverse="true"]{
+        grid-template-columns: 1fr 300px;
+    }
+    section .h2-img{
+        display: grid;
+        place-items: center;
+    }
+    section .h2-img img{
+        max-height: 250px;
+    }
+    @media (max-width: 600px) {
+        section{
+            grid-template-columns: 1fr;
+            width: 80%;
+        }
+        section .h2-img img{
+            max-height: 150px;
+        }
+    }
+</style>

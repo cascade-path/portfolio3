@@ -11,11 +11,11 @@ import HeaderNavHoverMenu from './ui/HeaderNavHoverMenu.astro';
     </div>
     <div style="height:300px"></div>
     <nav>
-        <a href="/">top</a>
-        <a href="/about">about</a>
-        <a href="/skill">skill</a>
-        <a href="/works">works</a>
-        <a href="/contact">contact</a>
+        <a href="/" data-ja="トップ">top</a>
+        <a href="/about" data-ja="概要">about</a>
+        <a href="/skill" data-ja="スキル">skill</a>
+        <a href="/works" data-ja="作品">works</a>
+        <a href="/contact" data-ja="お問い合わせ">contact</a>
     </nav>
     <Hamburger />
     <HeaderNavHoverMenu />
@@ -27,11 +27,11 @@ import HeaderNavHoverMenu from './ui/HeaderNavHoverMenu.astro';
         </a>
     </div>
     <nav>
-        <a href="/">top</a>
-        <a href="/about">about</a>
-        <a href="/skill">skill</a>
-        <a href="/works">works</a>
-        <a href="/contact">contact</a>
+        <a href="/" data-ja>top</a>
+        <a href="/about" data-ja>about</a>
+        <a href="/skill" data-ja>skill</a>
+        <a href="/works" data-ja>works</a>
+        <a href="/contact" data-ja>contact</a>
     </nav>
     <Hamburger />
     <HeaderNavHoverMenu />
@@ -49,7 +49,7 @@ import HeaderNavHoverMenu from './ui/HeaderNavHoverMenu.astro';
         gap: 3px;
         width: 100%;
         grid-column: 2/4;
-        background: linear-gradient(180deg,var(--main) 0% 10%,var(--accent) 10% 90%,var(--main) 90% 100%);
+        background: linear-gradient(180deg,var(--main) 0% 10%,var(--accent),var(--main) 90% 100%);
     }
     header nav a{
         display: grid;

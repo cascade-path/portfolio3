@@ -1,3 +1,16 @@
 <h2>
     <slot />
 </h2>
+
+<style>
+    h2{
+        width: min(800px, 80%);
+        font-size: 2em;
+        margin: 1em auto;
+    }
+    @media (min-width: 600px) {
+        h2{
+            font-size: 3em;
+        }
+    }
+</style>
