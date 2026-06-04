@@ -1,0 +1,23 @@
+---
+const {HREF} = Astro.props;
+---
+
+<a href={HREF} class="btn-back">
+    <slot />
+</a>
+
+<style>
+    a.btn-back{
+        display: grid;
+        place-items: center;
+        min-width: 150px;
+        min-height: 50px;
+        background: var(--main);
+        color: unset;
+        text-decoration: unset;
+        border-radius: 2px;
+    }
+    a.btn-back:hover{
+        text-decoration: underline;
+    }
+</style>

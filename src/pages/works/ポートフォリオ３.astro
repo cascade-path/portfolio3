@@ -5,16 +5,32 @@ import Footer from '../../components/Footer.astro';
 import H1 from '../../components/H1.astro';
 import H2 from '../../components/H2.astro';
 import Main from '../../components/Main.astro';
-import Section from '../../components/Section.astro';
+import Table from '../../components/ui/Table.astro';
+import WorksImg from '../../components/ui/WorksImg.astro';
+import BtnBack from '../../components/ui/BtnBack.astro'
 ---
 
 <Layout title="制作実績:ポートフォリオ３ | cascade-path">
 	<Header />
 	<H1>制作実績:ポートフォリオ３</H1>
     <Main>
+        <WorksImg SRC="＃＃" ALT="このポートフォリオ"　/>
+        <Table rows={[
+            { left: "公開日", right: "2026年6月" },
+            { left: "規模", right: "17ページ以上" },
+            { left: "技術", right: "Astro/SVG" },
+            { left: "制作期間", right: "4日" },
+            { left: "制作環境", right: "VS Code/GitHub/Vercel" },
+            { left: "公開リンク", right: "https://portfolio3.cascade-path.com" },
+        ]} />
         <H2>制作過程</H2>
-        <Section data-reverse="true">
-        </Section>
+        <h3>最新のポートフォリオ</h3>
+        <div>6/1から作りはじめたAstro製のポートフォリオです。</div>
+        <div>拡張性と保守性を意識しながら突貫工事中！</div>
+        <p></p>
+        <div>直近4ヶ月に3回目のポートフォリオ制作。</div>
+        <h2>まとめ</h2>
+        <BtnBack HREF="/works">一覧に戻る</BtnBack>
     </Main>
     <Footer />
 </Layout>

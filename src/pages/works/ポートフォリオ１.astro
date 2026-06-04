@@ -5,16 +5,27 @@ import Footer from '../../components/Footer.astro';
 import H1 from '../../components/H1.astro';
 import H2 from '../../components/H2.astro';
 import Main from '../../components/Main.astro';
-import Section from '../../components/Section.astro';
+import Table from '../../components/ui/Table.astro';
+import WorksImg from '../../components/ui/WorksImg.astro';
+import BtnBack from '../../components/ui/BtnBack.astro'
 ---
 
 <Layout title="ポートフォリオ１ | cascade-path">
 	<Header />
 	<H1>制作実績/works</H1>
     <Main>
+        <WorksImg SRC="https://portfolio.cascade-path.com/wp-content/uploads/2026/04/3956709af60a9f35dad1e0e84e9a34aa-edited.jpeg" />
+        <Table rows={[
+            { left: "公開日", right: "2026年3月" },
+            { left: "規模", right: "5ページ" },
+            { left: "技術", right: "HTML/CSS/JS/SVG" },
+            { left: "制作期間", right: "1週間" },
+            { left: "制作環境", right: "VS Code + GitHub" },
+            { left: "公開リンク", right: "https://cascade-path.github.io/portfolio" },
+        ]} />
         <H2>制作過程</H2>
-        <Section data-reverse="true">
-        </Section>
+        <h2>まとめ</h2>
+        <BtnBack HREF="/works">一覧に戻る</BtnBack>
     </Main>
     <Footer />
 </Layout>

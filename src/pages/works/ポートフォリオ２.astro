@@ -5,16 +5,32 @@ import Footer from '../../components/Footer.astro';
 import H1 from '../../components/H1.astro';
 import H2 from '../../components/H2.astro';
 import Main from '../../components/Main.astro';
-import Section from '../../components/Section.astro';
+import Table from '../../components/ui/Table.astro';
+import WorksImg from '../../components/ui/WorksImg.astro';
+import BtnBack from '../../components/ui/BtnBack.astro'
 ---
 
 <Layout title="制作実績:ポートフォリオ２ | cascade-path">
 	<Header />
 	<H1>制作実績:ポートフォリオ２</H1>
     <Main>
+        <WorksImg SRC="https://portfolio.cascade-path.com/wp-content/uploads/2026/04/058b5f8f2d275e8fa5152f5cfe389b7a-edited.jpeg" />
+        <Table rows={[
+            { left: "公開日", right: "2026年4月" },
+            { left: "規模", right: "9ページ" },
+            { left: "技術", right: "PHP/HTML/CSS/JS" },
+            { left: "制作期間", right: "2週間" },
+            { left: "制作環境", right: "WordPress/VS Code" },
+            { left: "公開リンク", right: "https://portfolio.cascade-path.com" },
+        ]} />
         <H2>制作過程</H2>
-        <Section data-reverse="true">
-        </Section>
+        <h3>WordPressテーマ編集</h3>
+        <WorksImg SRC="https://portfolio.cascade-path.com/wp-content/uploads/2026/04/7725d3e038d01765b410d86984d928c5-edited.png" />
+        <WorksImg SRC="https://portfolio.cascade-path.com/wp-content/uploads/2026/04/da5d94a96f86251808b391e5c3e744fd-edited.png" />
+        <h3>WordPress</h3>
+        <WorksImg SRC="https://portfolio.cascade-path.com/wp-content/uploads/2026/04/7fe3b14711b7399da8afae82e943cd53-2048x1432.png" />
+        <h2>まとめ</h2>
+        <BtnBack HREF="/works">一覧に戻る</BtnBack>
     </Main>
     <Footer />
 </Layout>
