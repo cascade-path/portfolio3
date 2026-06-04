@@ -6,12 +6,25 @@ import H1 from '../../components/H1.astro';
 import H2 from '../../components/H2.astro';
 import Main from '../../components/Main.astro';
 import Section from '../../components/Section.astro';
+import Table from '../../components/ui/Table.astro'
+import WorksImg from '../../components/ui/WorksImg.astro';  
+
+const SRC = "https://portfolio.cascade-path.com/wp-content/uploads/2026/04/fd58a0445d52bae951586692f841e2d3-edited-1.jpeg";
+
 ---
 
 <Layout title="制作実績:桜山町 | cascade-path">
 	<Header />
 	<H1>制作実績:桜山町のホームページ</H1>
     <Main>
+        <WorksImg SRC={SRC} />
+        <Table rows={[
+            { left: "公開日", right: "2026年1月" },
+            { left: "規模", right: "1ページ" },
+            { left: "技術", right: "HTML/CSS/JS" },
+            { left: "制作期間", right: "1週間" },
+            { left: "制作環境", right: "VS Code" },
+        ]} />
         <H2>制作過程</H2>
         <Section data-reverse="true">
         </Section>

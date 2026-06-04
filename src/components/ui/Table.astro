@@ -1,0 +1,27 @@
+---
+const { rows } = Astro.props;
+---
+
+<div class="table">
+  {rows.map(({ left, right }) => (
+    <>
+      <div>{left}</div>
+      <div>{right}</div>
+    </>
+  ))}
+</div>
+
+<style>
+    .table{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: min(90%, 400px);
+        border: solid var(--main) 1px;
+        margin: 0 auto;
+        font-size: 1.5rem;
+    }
+    .table>*{
+        border: inherit;
+        padding: .5em;
+    }
+</style>

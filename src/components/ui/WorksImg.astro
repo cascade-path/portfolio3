@@ -1,0 +1,16 @@
+---
+const {SRC} = Astro.props;
+---
+
+<div class="works-img-wrap">
+    <img src={SRC} class="works-img">
+</div>
+
+<style>
+    .works-img-wrap{
+        width: min(800px, 90%);
+    }
+    .works-img{
+        width: 100%;
+    }
+</style>
