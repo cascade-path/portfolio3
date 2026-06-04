@@ -7,6 +7,18 @@
         <a href="/">
           <img src="/favicon.svg" alt="Cascade-path Logo">
         </a>
+      <a href="https://github.com/cascade-path" target="_blank" rel="noopener noreferrer">
+        <img src="/github.svg" alt="GitHub">
+      </a>
+      <a href="https://codepen.io/cascade-path" target="_blank" rel="noopener noreferrer">
+        <img src="/codepen.svg" alt="CodePen">
+      </a>
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        <img src="/x.svg" alt="Twitter">
+      </a>
+      <a href="mailto:info@cascade-path.com" target="_blank" rel="noopener noreferrer">
+        <img src="/gmail.svg" alt="Gmail">
+      </a>
       </div>
       <nav>
         <a href="/">Home</a>
@@ -29,33 +41,43 @@
         min-height: 300px;
         background: var(--main);
     }
+    footer .sitemap{
+        display: grid;
+        gap: 20px;
+        place-items: center;
+    }
     footer .logo{
         display: grid;
+        grid-template-columns: repeat(5,1fr);
+        gap: 10px;
         place-items: center;
-        max-width: 100px;
     }
     footer .logo a{
         display: contents;
     }
+    footer .logo img{
+        height: 30px;
+        filter: grayscale(100%);
+    }
+    footer .logo img:hover{
+        filter: drop-shadow(0 0 5px var(--accent)) grayscale(0%);
+        transition: filter .3s;
+    }
+    footer:has(.logo img:hover) .logo img:not(:hover){
+        filter: blur(2px) grayscale(100%);
+        transition: filter .3s;
+    }
 
     footer nav{
-        display: grid;
-        gap: 3px;
+        display: flex;
+        gap: 10px;
     }
-
-    footer .sitemap{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        justify-content: space-around;
-        gap: 2rem;
-        max-width: 400px;
-    }
-    footer .sitemap nav a{
+    footer nav a{
         display: block;
         color: unset;
         text-decoration: unset;
     }
-    footer .sitemap nav a:hover{
+    footer nav a:hover{
         color: var(--accent);
         text-shadow: 0 0 5px var(--accent);
         transition: color .2s, text-shadow .2s;

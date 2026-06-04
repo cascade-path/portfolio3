@@ -5,7 +5,7 @@ import HeaderNavHoverMenu from './ui/HeaderNavHoverMenu.astro';
 
 <header data-static>
     <div class="logo">
-        <a href="/">
+        <a href="/" class="logo-link">
             <img src="/logo.svg" alt="Cascade-path Logo">
         </a>
     </div>
@@ -22,7 +22,9 @@ import HeaderNavHoverMenu from './ui/HeaderNavHoverMenu.astro';
 </header>
 <header data-scrolled>
     <div class="logo">
-        <img src="/logo.svg" alt="Cascade-path Logo">
+        <a href="/" class="logo-link"> 
+            <img src="/logo.svg" alt="Cascade-path Logo">
+        </a>
     </div>
     <nav>
         <a href="/">top</a>
@@ -79,6 +81,10 @@ import HeaderNavHoverMenu from './ui/HeaderNavHoverMenu.astro';
         grid-column: 1/2;
         position: sticky;
         top: 0;
+    }
+    .logo-link{
+        display: grid;
+        place-items: center;
     }
     .logo img{
         width: 90%;
