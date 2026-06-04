@@ -1,0 +1,49 @@
+---
+---
+
+<label class="hamburger"><input type="checkbox" hidden></label>
+
+<style>
+    @media (max-width: 600px){
+        .hamburger{
+            display: grid;
+            place-items: center;
+            position: relative;
+            grid-column: 3/4;
+            grid-row: 1/2;
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1/1;
+            cursor: pointer;
+        }
+        .hamburger::before,
+        .hamburger::after{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 60%;
+            background: var(--accent);
+            height: 2px;
+            border-radius: 1px;
+            transform-origin: center;
+            transition: transform .5s;
+        }
+        .hamburger::before{
+            transform: translateY(5px);
+        }
+        .hamburger::after{
+            transform: translateY(-5px);
+        }
+        .hamburger:has(:checked)::before{
+            transform: rotate(-45deg) translateY(0px);
+        }
+        .hamburger:has(:checked)::after{
+            transform: rotate(45deg) translateY(0px);
+        }
+    }
+    @media (min-width: 601px){
+        .hamburger{
+            display: none;
+        }
+    }
+</style>

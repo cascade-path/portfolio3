@@ -3,15 +3,20 @@
 
 <footer>
     <div class="sitemap">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/skill">Skill</a></li>
-            <li><a href="/works">Works</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/sitemap">Sitemap</a></li>
-        </ul>
+      <div class="logo">
+        <a href="/">
+          <img src="/favicon.svg" alt="Cascade-path Logo">
+        </a>
+      </div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/skill">Skill</a>
+        <a href="/works">Works</a>
+        <a href="/contact">Contact</a>
+        <a href="/blog">Blog</a>
+        <a href="/sitemap">Sitemap</a>
+      </nav>
     </div>
     <div class="copy">&copy;2026 cascade-path</div>
 </footer>
@@ -21,8 +26,39 @@
     footer{
         display: grid;
         place-items: center;
-        height: 300px;
+        min-height: 300px;
         background: var(--main);
+    }
+    footer .logo{
+        display: grid;
+        place-items: center;
+        max-width: 100px;
+    }
+    footer .logo a{
+        display: contents;
+    }
+
+    footer nav{
+        display: grid;
+        gap: 3px;
+    }
+
+    footer .sitemap{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: space-around;
+        gap: 2rem;
+        max-width: 400px;
+    }
+    footer .sitemap nav a{
+        display: block;
+        color: unset;
+        text-decoration: unset;
+    }
+    footer .sitemap nav a:hover{
+        color: var(--accent);
+        text-shadow: 0 0 5px var(--accent);
+        transition: color .2s, text-shadow .2s;
     }
 </style>
 
