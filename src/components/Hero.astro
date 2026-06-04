@@ -1,0 +1,73 @@
+	<div class="hero">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 530 200">
+            <text x="0" y="120" font-size="80">Cascade-path</text>
+        </svg>
+		<p class="hero-fade">先入観に頼らない挑戦</p>
+	</div>
+
+<style>@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@600&display=swap);
+
+	.hero{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+		position: relative;
+		z-index: 1;
+		color: var(--base);
+		text-align: center;
+	}
+	.hero::before{
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: url(https://res.cloudinary.com/drzcql6d4/image/upload/q_auto/f_auto/v1780557985/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2026-05-16_10.33.49_w0sven.png);
+		filter: blur(8px) brightness(2);
+		z-index: -1;
+		animation: hero-bg 2s 6s linear both;
+	}
+	@keyframes hero-bg{
+		0%{opacity: 0;}
+		100%{opacity: .2;}
+	}
+	.hero::after{
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: var(--accent);
+		z-index: -2;
+	}
+	.hero-fade{
+		font-size: 1.5rem;
+		text-shadow: 0 0 10px var(--accent);
+		animation: fade 2s 6s ease-out both;
+	}
+	@keyframes fade{
+		0%{opacity: 0;translate: 0 20px;}
+		100%{opacity: 1;translate: 0 0;}
+	}
+.hero svg{
+    width: min(100vw,500px);
+}
+.hero text{
+    fill: var(--main);
+    stroke: var(--base);
+    stroke-dasharray: 350;
+    stroke-width: 2;
+    stroke-linecap: round;
+    animation: intro-text 6s linear both;
+    font-family: "Noto Sans JP";
+    font-weight: bold;
+}
+@keyframes intro{
+    0%{opacity: 1;translate: 0 0;}
+    50%{opacity: 0;translate: 0 -20vh;}
+    100%{opacity: 0;translate: 0 -120vh;}
+}
+@keyframes intro-text{
+    0%{stroke-dashoffset: -350;fill-opacity: 0;stroke-width: 10;}
+    50%{stroke-dashoffset: -50;fill-opacity: 0;stroke-width: 2;}
+    100%{stroke-dashoffset: 0;fill-opacity: 1;stroke-width: 1;}
+}
+</style>
