@@ -1,10 +1,13 @@
 ---
 import Hamburger from './ui/Hamburger.astro';
+import HeaderNavHoverMenu from './ui/HeaderNavHoverMenu.astro';
 ---
 
 <header data-static>
     <div class="logo">
-        <img src="/logo.svg" alt="Cascade-path Logo">
+        <a href="/">
+            <img src="/logo.svg" alt="Cascade-path Logo">
+        </a>
     </div>
     <div style="height:300px"></div>
     <nav>
@@ -15,6 +18,7 @@ import Hamburger from './ui/Hamburger.astro';
         <a href="/contact">contact</a>
     </nav>
     <Hamburger />
+    <HeaderNavHoverMenu />
 </header>
 <header data-scrolled>
     <div class="logo">
@@ -28,12 +32,14 @@ import Hamburger from './ui/Hamburger.astro';
         <a href="/contact">contact</a>
     </nav>
     <Hamburger />
+    <HeaderNavHoverMenu />
 </header>
 
 <style>
     header{
         display: grid;
         grid-template-columns: 200px 1fr 60px;
+        position: relative;
     }
     header nav{
         display: grid;
@@ -57,6 +63,7 @@ import Hamburger from './ui/Hamburger.astro';
         text-shadow: 0 0 5px var(--accent);
         transition: color .2s, text-shadow .2s;
     }
+
     header[data-static]{
         grid-template-rows: 60px 200px 60px;
         background: var(--main);

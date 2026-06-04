@@ -1,0 +1,55 @@
+<div class="header-nav-hover-menu">
+    <p>ページのハイライト/画像を表示</p>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/skill">Skill</a>
+        <a href="/works">Works</a>
+        <a href="/sitemap">Sitemap</a>
+    </nav>
+
+</div>
+
+<style is:global>
+    header .header-nav-hover-menu{
+        transform: translateX(-200%);
+        left: 100%;
+        transition: transform 0s 0.5s ease-in-out,left 0.5s ease-in-out;
+    }
+    header:has(nav a:hover,.header-nav-hover-menu:hover) .header-nav-hover-menu{
+        transform: translateX(0%);
+        left: 0%;
+        transition: transform 0.5s 0.5s ease-in-out,left 0.5s 0.5s ease-in-out;
+    }
+</style>
+
+<style>
+    .header-nav-hover-menu{
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        background-color: var(--accent);
+        color: var(--main);
+    }
+    .header-nav-hover-menu nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+    .header-nav-hover-menu nav a{
+        color: unset;
+        text-decoration: unset;
+    }
+    .header-nav-hover-menu nav a:hover{
+        color: var(--accent);
+        text-shadow: 0 0 5px var(--accent);
+        transition: color .2s, text-shadow .2s;
+    }
+    @media (max-width: 600px) {
+        .header-nav-hover-menu{
+            display: none;
+        }
+    }
+</style>
