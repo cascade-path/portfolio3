@@ -1,11 +1,11 @@
 ---
-const { title, src, href } = Astro.props;
+const { title, src, href, about } = Astro.props;
 ---
 <a href={href} class="card">
     <img src={src} alt="card">
     <div class="content">
         <div class="title">{title}</div>
-        <p>カードの説明文が入ります。カードの特徴や使用技術などを簡潔に紹介します。</p>
+        <p>{about}</p>
     </div>
 </a>
 
@@ -28,13 +28,17 @@ const { title, src, href } = Astro.props;
     .card:hover img{
         transform: scale(1.1);
     }
+    .card:hover .content{
+        box-shadow: 0 0 30px var(--base);
+    }
     .card img{
         width: 100%;
         transition: transform .4s ease-out;
     }
     .card .title{
-        margin-top: 1rem;
-        padding: 0.5rem;
+        padding: 0.2rem;
+        font-size: 1.2rem;
+        font-weight: bold;
     }
     .card p{
         margin-top: 0.5rem;
@@ -43,7 +47,11 @@ const { title, src, href } = Astro.props;
     .card .content{
         position: absolute;
         top: 50%;
+        width: 100%;
+        height: 50%;
+        box-sizing: border-box;
         padding: 1rem;
         background: var(--accent);
+        transition: box-shadow .2s;
     }
 </style>
