@@ -100,12 +100,14 @@ import HeaderNavHoverMenu from './ui/HeaderNavHoverMenu.astro';
         right: 0;
         z-index: 1;
         opacity: 0;
+        box-shadow: 0 0px 0px var(--accent);
         transform: translateY(-100%);
         transition: transform .5s 1s, opacity .5s 0s;
     }
     header[data-scrolled][data-fixed="true"]{
         opacity: 1;
         transform: translateY(0%);
+        box-shadow: 0 1px 3px var(--accent);
         transition: transform .5s .5s, opacity .5s .5s;
         z-index: 2;
     }
