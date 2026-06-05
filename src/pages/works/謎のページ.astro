@@ -5,16 +5,27 @@ import Footer from '../../components/Footer.astro';
 import H1 from '../../components/H1.astro';
 import H2 from '../../components/H2.astro';
 import Main from '../../components/Main.astro';
-import Section from '../../components/Section.astro';
+import Table from '../../components/ui/Table.astro';
+import WorksImg from '../../components/ui/WorksImg.astro';
+import BtnBack from '../../components/ui/BtnBack.astro'
 ---
 
 <Layout title="謎のページ | cascade-path">
 	<Header />
 	<H1>制作実績:「謎のページ」</H1>
     <Main>
+        <WorksImg SRC="https://portfolio.cascade-path.com/wp-content/uploads/2026/04/53f16113fe0240234c96b26680412811-edited-1.jpeg" />
+        <Table rows={[
+            { left: "公開日", right: "2026年3月" },
+            { left: "規模", right: "2ページ" },
+            { left: "技術", right: "HTML/CSS" },
+            { left: "制作期間", right: "1日" },
+            { left: "制作環境", right: "VS Code" },
+            { left: "公開リンク", right: "https://github.com/cascade-path/info" },
+        ]} />
+        <div>CSS電卓の解説ページを突貫工事で作ったら、怪しい技術ブログになりました。</div>
         <H2>制作過程</H2>
-        <Section data-reverse="true">
-        </Section>
-    </Main>
+        <h2>まとめ</h2>
+        <BtnBack HREF="/works">一覧に戻る</BtnBack>
     <Footer />
 </Layout>
