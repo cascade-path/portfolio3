@@ -63,6 +63,8 @@ Supabase Strage無料枠
 Layout.astro
 pages/
   index.astro
+  info/
+    index.html
   about/
     index.astro
   skill/
