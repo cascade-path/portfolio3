@@ -1,0 +1,46 @@
+---
+const {HREF} = Astro.props;
+---
+
+<a href={HREF} class="view-more"></a>
+
+<style>
+    .view-more{
+        display: block;
+        width: 80px;
+        height: 40px;
+        border: solid var(--main) 3px;
+        position: relative;
+        overflow: hidden;
+    }
+    .view-more::before{
+        content: "詳細";
+        display: grid;
+        place-items: center;
+        position: absolute;
+        inset: 0;
+        background: var(--accent);
+        color: var(--main);
+        font-size: 1.2rem;
+        transform: translateX(0);
+        transition: .3s;
+    }
+    .view-more::after{
+        content: "→";
+        display: grid;
+        place-items: center;
+        position: absolute;
+        inset: 0;
+        background: var(--main);
+        color: var(--accent);
+        font-size: 1.2rem;
+        transform: translateX(100%);
+        transition: .3s;
+    }
+    .view-more:hover::before{
+        transform: translateX(-100%);
+    }
+    .view-more:hover::after{
+        transform: translateX(0);
+    }
+</style>

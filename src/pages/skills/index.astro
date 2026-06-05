@@ -3,23 +3,28 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import H1 from '../../components/H1.astro';
-import H2 from '../../components/H2.astro';
 import Main from '../../components/Main.astro';
-import Section from '../../components/Section.astro';
+import BtnBack from '../../components/ui/BtnBack.astro';
+import ViewMore from '../../components/ui/ViewMore.astro';
 ---
 
 <Layout title="スキルセット | cascade-path">
 	<Header />
 	<H1>スキルセット/skills</H1>
     <Main>
-        <H2>制作過程</H2>
-        <Section data-reverse="true">
-            <nav>
-                <a href="/skills/css">HTML</a>
-                <a href="/skills/css">CSS</a>
-                <a href="/skills/css">Astro</a>
-            </nav>
-        </Section>
+        <h3>HTML</h3>
+        <ViewMore HREF="/skills/html" />
+        <h3>CSS</h3>
+        <div>レスポンシブ、grid、flex、アニメーション、擬似クラス</div>
+        <ViewMore HREF="/skills/css" />
+        <h3>SVG</h3>
+        <ViewMore HREF="/skills" />
+        <h3>Astro</h3>
+        <ViewMore HREF="/skills/astro" />
+        <h3>JavaScript</h3>
+        <ViewMore HREF="/skills" />
+        <h3>Cloudflare</h3>
+        <ViewMore HREF="/skills" />
     </Main>
     <Footer />
 </Layout>
