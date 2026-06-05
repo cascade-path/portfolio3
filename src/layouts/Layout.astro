@@ -46,7 +46,7 @@ const { title = "no title" } = Astro.props;
 	</body>
 </html>
 
-<style>
+<style is:global>
 	:root{
 		--base: #333;
 	    --main: #0bd;
@@ -61,5 +61,12 @@ const { title = "no title" } = Astro.props;
 		background: var(--base);
 		color: var(--accent);
 		overscroll-behavior: none;
+	}
+	main a{
+		color: var(--main);
+		text-decoration: none;
+	}
+	main a:hover{
+		text-decoration: underline;
 	}
 </style>

@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import H1 from '../../components/H1.astro';
 import H2 from '../../components/H2.astro';
 import Main from '../../components/Main.astro';
+import BtnBack from '../../components/ui/BtnBack.astro';
 ---
 
 <Layout title="TOP | cascade-path">
@@ -12,13 +13,29 @@ import Main from '../../components/Main.astro';
 	<H1>トップ/TOP</H1>
     <Main>
         <H2>お知らせ</H2>
-        <div></div>
+        <div class="section-text">
+            <h3>新ポートフォリオ完成について</h3>
+            <p>6月4日に本ポートフォリオを公開しました。</p>
+            <p>旧ポートフォリオは<a href="https://portfolio.cascade-path.com">こちら</a>から閲覧ください。</p>
+        </div>
+        <div class="section-text">
+            <h3>今後の更新予定</h3>
+            <p>パンくずリスト追加を検討中</p>
+            <p>サイトマップのデザイン案を作成中</p>
+            <p>MVは最後に作る</p>
+        </div>
         <H2>最新の制作</H2>
         <div>準備中</div>
-        <div>一覧</div>
+        <BtnBack HREF="/works">実績一覧</BtnBack>
         <H2>ブログ投稿</H2>
         <div>最新3件を取得...</div>
         <div>もっと見る</div>
     </Main>
     <Footer />
 </Layout>
+
+<style>
+    .section-text{
+        width: min(700px,85vw);
+    }
+</style>
